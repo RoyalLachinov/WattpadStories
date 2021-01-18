@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Wattpad Stories</string>
+    <string name="offline_message">The app can be used offline after the list is persisted</string>
+</resources>

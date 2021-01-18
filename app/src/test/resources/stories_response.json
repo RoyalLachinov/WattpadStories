@@ -1,0 +1,115 @@
+{
+  "stories": [
+    {
+      "id": "250604771",
+      "title": "Damirae: Highschool Days",
+      "modifyDate": "2021-01-16T17:23:20Z",
+      "user": {
+        "name": "Fleurette456",
+        "avatar": "https:\/\/img.wattpad.com\/useravatar\/Fleurette456.128.590373.jpg",
+        "fullname": ""
+      },
+      "cover": "https:\/\/img.wattpad.com\/cover\/250604771-256-k430484.jpg"
+    },
+    {
+      "id": "255100944",
+      "title": "my last wishes [hwang hyunjin x reader]",
+      "modifyDate": "2021-01-16T17:23:21Z",
+      "user": {
+        "name": "fallenangelaphrodite",
+        "avatar": "https:\/\/img.wattpad.com\/useravatar\/fallenangelaphrodite.128.34460.jpg",
+        "fullname": ""
+      },
+      "cover": "https:\/\/img.wattpad.com\/cover\/255100944-256-k788255.jpg"
+    },
+    {
+      "id": "248671714",
+      "title": "Hell felt like heaven with her.",
+      "modifyDate": "2021-01-16T17:23:21Z",
+      "user": {
+        "name": "sxb1tch",
+        "avatar": "https:\/\/img.wattpad.com\/useravatar\/sxb1tch.128.739809.jpg",
+        "fullname": ""
+      },
+      "cover": "https:\/\/img.wattpad.com\/cover\/248671714-256-k50844.jpg"
+    },
+    {
+      "id": "255221763",
+      "title": "Shreeja's Theme Shop \u2022 Theme + Bio",
+      "modifyDate": "2021-01-16T17:23:20Z",
+      "user": {
+        "name": "Enchanting_S",
+        "avatar": "https:\/\/img.wattpad.com\/useravatar\/Enchanting_S.128.732862.jpg",
+        "fullname": "\ud835\udc38\ud835\udcc3\ud835\udcb8\ud835\udcbd\ud835\udcb6\ud835\udcc3\ud835\udcc9\ud835\udcbe\ud835\udcc3\ud835\udc54 \ud835\udd4a\ud835\udd60\ud835\udd66\ud835\udd5d"
+      },
+      "cover": "https:\/\/img.wattpad.com\/cover\/255221763-256-k788324.jpg"
+    },
+    {
+      "id": "255037592",
+      "title": "My Mydoria",
+      "modifyDate": "2021-01-16T17:23:16Z",
+      "user": {
+        "name": "AdiahHardy",
+        "avatar": "https:\/\/img.wattpad.com\/useravatar\/AdiahHardy.128.573792.jpg",
+        "fullname": "Adiah Hardy"
+      },
+      "cover": "https:\/\/img.wattpad.com\/cover\/255037592-256-k650885.jpg"
+    },
+    {
+      "id": "251741722",
+      "title": "Take my hand...",
+      "modifyDate": "2021-01-16T17:23:15Z",
+      "user": {
+        "name": "jungk00kie_jeon",
+        "avatar": "https:\/\/img.wattpad.com\/useravatar\/jungk00kie_jeon.128.613555.jpg",
+        "fullname": "V.K"
+      },
+      "cover": "https:\/\/img.wattpad.com\/cover\/251741722-256-k277087.jpg"
+    },
+    {
+      "id": "255210474",
+      "title": "Just A Love Story",
+      "modifyDate": "2021-01-16T17:23:16Z",
+      "user": {
+        "name": "vrubishtibar",
+        "avatar": "https:\/\/img.wattpad.com\/useravatar\/vrubishtibar.128.545298.jpg",
+        "fullname": "vrubi shtibar"
+      },
+      "cover": "https:\/\/img.wattpad.com\/cover\/255210474-256-k786877.jpg"
+    },
+    {
+      "id": "255222859",
+      "title": "invisibility is not a superpower",
+      "modifyDate": "2021-01-16T17:23:14Z",
+      "user": {
+        "name": "ESueK13",
+        "avatar": "https:\/\/img.wattpad.com\/useravatar\/ESueK13.128.215681.jpg",
+        "fullname": ""
+      },
+      "cover": "https:\/\/img.wattpad.com\/cover\/255222859-256-k788990.jpg"
+    },
+    {
+      "id": "255217270",
+      "title": "If You Have To Ask",
+      "modifyDate": "2021-01-16T17:23:09Z",
+      "user": {
+        "name": "F-NicoleX",
+        "avatar": "https:\/\/img.wattpad.com\/useravatar\/F-NicoleX.128.786237.jpg",
+        "fullname": "All.About.AK"
+      },
+      "cover": "https:\/\/img.wattpad.com\/cover\/255217270-256-k785386.jpg"
+    },
+    {
+      "id": "251899322",
+      "title": "\u1d00\u1d05\u1d0d\u026a\u0280\u1d00\u1d1b\u026a\u1d0f\u0274",
+      "modifyDate": "2021-01-16T17:23:12Z",
+      "user": {
+        "name": "aange11",
+        "avatar": "https:\/\/img.wattpad.com\/useravatar\/aange11.128.662882.jpg",
+        "fullname": "\u2730"
+      },
+      "cover": "https:\/\/img.wattpad.com\/cover\/251899322-256-k670933.jpg"
+    }
+  ],
+  "nextUrl": "https:\/\/www.wattpad.com\/api\/v3\/stories?offset=10&limit=10&fields=stories%28id%2Ctitle%2Ccover%2CmodifyDate%2Cuser%29&filter=new"
+}
