@@ -51,12 +51,7 @@ class MainActivity : AppCompatActivity() {
         viewBindingMainActivity.recyclerViewStories.addItemDecoration(
             DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
         )
-
-        lifecycleScope.launchWhenStarted{
-            storiesViewModel.getStoriesFlow(true).collect {
-                storiesAdapter.submitData(lifecycle, it)
-            }
-        }
+        fetchAndShowStories("")
 
         viewBindingMainActivity.recyclerViewStories.adapter =
             storiesAdapter.withLoadStateFooter(
@@ -66,9 +61,7 @@ class MainActivity : AppCompatActivity() {
         viewBindingMainActivity.editTextSearch.addTextChangedListener(object: TextWatcher{
 
             override fun afterTextChanged(s: Editable?) {
-                if(s.toString().trim().isNotEmpty()){
-                    getSearchedStories(s.toString())
-                }
+                fetchAndShowStories(s.toString())
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -78,20 +71,26 @@ class MainActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 //TODO("Not yet implemented")
             }
-
-
         })
 
     }
 
-    fun getSearchedStories(searchedText:String){
-        lifecycleScope.launch {
-            storiesViewModel.getSearchedStories(searchedText).collect {
-                storiesAdapter.submitData(lifecycle, it)
+    private fun fetchAndShowStories(searchedText:String){
+        if(searchedText.trim().isNotEmpty()){
+            lifecycleScope.launch {
+                storiesViewModel.getSearchedStories(searchedText).collect {
+                    storiesAdapter.submitData(lifecycle, it)
+                }
+            }
+        }else{
+            lifecycleScope.launchWhenStarted{
+                storiesViewModel.getStoriesFlow(true).collect {
+                    storiesAdapter.submitData(lifecycle, it)
+                }
             }
         }
-    }
 
+    }
 
     override fun onDestroy() {
         binding = null
