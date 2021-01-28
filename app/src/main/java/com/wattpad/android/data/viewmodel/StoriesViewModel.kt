@@ -23,4 +23,8 @@ class StoriesViewModel @ViewModelInject constructor(private val storiesRepo: Sto
         currentStoryList = newResult
         return newResult
     }
+
+    fun getSearchedStories(searchedText: String): Flow<PagingData<Story>> {
+        return  storiesRepo.getSearchedStories(searchedText)
+    }
 }

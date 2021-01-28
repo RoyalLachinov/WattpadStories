@@ -1,6 +1,8 @@
 package com.wattpad.android.ui
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.Gravity
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +13,7 @@ import com.wattpad.android.data.viewmodel.StoriesViewModel
 import com.wattpad.android.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
@@ -36,13 +39,13 @@ class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
     private val viewBindingMainActivity get() = binding!!
 
+    private val storiesAdapter = StoriesAdapter()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBindingMainActivity.root)
-
-        val storiesAdapter = StoriesAdapter()
 
         viewBindingMainActivity.recyclerViewStories.adapter = storiesAdapter
         viewBindingMainActivity.recyclerViewStories.addItemDecoration(
@@ -60,6 +63,39 @@ class MainActivity : AppCompatActivity() {
             footer = StoryLoadStateAdapter { storiesAdapter.retry() }
             )
 
+        viewBindingMainActivity.editTextSearch.addTextChangedListener(object: TextWatcher{
+
+            override fun afterTextChanged(s: Editable?) {
+                if(s.toString().trim().isNotEmpty()){
+                    getSearchedStories(s.toString())
+                }
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                //TODO("Not yet implemented")
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                //TODO("Not yet implemented")
+            }
+
+
+        })
+
+    }
+
+    fun getSearchedStories(searchedText:String){
+        lifecycleScope.launch {
+            storiesViewModel.getSearchedStories(searchedText).collect {
+                storiesAdapter.submitData(lifecycle, it)
+            }
+        }
+    }
+
+
+    override fun onDestroy() {
+        binding = null
+        super.onDestroy()
     }
 
     override fun onResume() {

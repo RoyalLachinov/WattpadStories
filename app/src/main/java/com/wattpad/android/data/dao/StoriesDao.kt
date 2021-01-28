@@ -21,6 +21,9 @@ interface StoriesDao {
     @Query("SELECT * FROM stories")
     fun getStories(): PagingSource<Int, Story>
 
+    @Query("Select * From stories Where title LIKE '%'||:searchedText||'%'")
+    fun getSearchedStories(searchedText:String) : PagingSource<Int, Story>
+
     @Query("SELECT * FROM stories")
     fun getStoriesList(): MutableList<Story>
 

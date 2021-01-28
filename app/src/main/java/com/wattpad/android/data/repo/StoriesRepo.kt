@@ -36,4 +36,17 @@ class StoriesRepo @Inject constructor(
             }
         ).flow
     }
+
+    fun getSearchedStories(searchedText:String) : Flow<PagingData<Story>>{
+        return Pager(
+            config = PagingConfig(
+                pageSize = CoreConstants.STORY_LIMIT_SIZE,
+                enablePlaceholders = false
+            ),
+            remoteMediator = null,
+            pagingSourceFactory = {
+                storiesDatabase.getStoriesDao().getSearchedStories(searchedText)
+            }
+        ).flow
+    }
 }
